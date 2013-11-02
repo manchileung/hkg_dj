@@ -153,13 +153,22 @@ function displayUI()
   /*
    * Draw the UI.
    */
-  $('#plugbot-ui').append('<p id="plugbot-btn-woot" style="color:' + cWoot123
-    + '">自動正皮</p><p id="plugbot-btn-queue" style="color:' + cQueue123
+/*
+  $('#plugbot-ui').append('<p id="plugbot-btn-woot" style="color:' + cWoot
+    + '">自動正皮</p><p id="plugbot-btn-queue" style="color:' + cQueue
     + '">自動輪DJ</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
     + '">用戶列表</p>');
+*/
+  $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
+    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
+    + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
+    + '">用戶列表</p>');
+
 }
+
+
 
 
 /**
