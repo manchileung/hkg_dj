@@ -130,9 +130,20 @@ function initAPIListeners()
 /**
  * Renders all of the Plug.bot "UI" that is visible beneath the video player.
  */
+ 
+ function displayico777nUI()
+{
+ if ($iconnnn = "0"){
+  $iconnnn = "1"
+ }else{$iconnnn = "0"}
+
+}
+ 
+ 
+ 
 function displayiconUI()
 {
-if (iconnnn){
+if (iconnnn="0"){
 $('#plugbot-icon').remove();
 $('#footer-container').prepend('<div id="plugbot-icon"></div>');
 $('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1100px"></frame>');
@@ -176,7 +187,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p><p><span onclick="var iconnnn=1">EMOJI ICON</span></p>');
+    + '">用戶列表</p><p><span onclick="">EMOJI ICON</span></p>');
 
 }
 
@@ -705,6 +716,7 @@ function onCookiesLoaded()
   initAPIListeners();
   displayUI();
   displayiconUI();
+  displayico777nUI()
   initUIListeners();
 }
 
