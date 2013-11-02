@@ -134,7 +134,7 @@ function displayiconUI()
 
 $('#plugbot-icon').remove();
 $('#footer-container').prepend('<div id="plugbot-icon"></div>');
-$('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1320px"></frame>');
+$('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="900px"></frame>');
 
 }
  
@@ -648,7 +648,7 @@ function readCookies()
  * Write the CSS rules that are used for components of the
  * Plug.bot UI.
  */
-$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }#plugbot-icon { position: absolute; margin-left: 5px; margin-top:30px; }#plugbot-icon p { background-color: #0b0b0b; height: 352px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }');
+$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }#plugbot-icon { position: absolute; margin-left: 5px; margin-top:80px; }#plugbot-icon p { background-color: #0b0b0b; height: 352px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }');
 
 
 /**
