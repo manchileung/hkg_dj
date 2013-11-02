@@ -689,6 +689,7 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
+  displayiconUI();
   initUIListeners();
 }
 
