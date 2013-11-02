@@ -129,6 +129,7 @@ function initAPIListeners()
 
 /**
  * Renders all of the Plug.bot "UI" that is visible beneath the video player.
+ */
 
  
 function displayUI()
@@ -184,6 +185,9 @@ function displayUI()
  *   3. *Execute whatever logic pertains to the specific button*
  *   4. Update the cookie.
  */
+ 
+ 
+ 
 function initUIListeners()
 {
   /*
