@@ -304,10 +304,12 @@ function djAdvanced(obj)
 
   /*
    * If auto-woot is enabled, WOOT! the song.
-   */
+
   if (autowoot) {
     $('#button-vote-positive').click();
-  }
+  }   
+  
+  */
 
   /*
    * If the userlist is enabled, re-populate it.
@@ -325,11 +327,11 @@ function queueUpdate()
 {
   /*
    * If auto-queueing has been enabled, and we are currently not in the waitlist, then try to join the list.
-   */
+
   if (autoqueue && !isInQueue())
   {
     joinQueue();
-  }
+  }   */
 }
 
 
