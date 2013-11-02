@@ -132,10 +132,7 @@ function initAPIListeners()
 function displayiconUI()
 {
 
-  $('#plugbot-icon').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
-    + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p>');
+  $('#plugbot-icon').append('123123123');
 
 }
  
