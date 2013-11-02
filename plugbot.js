@@ -52,7 +52,6 @@ var hideVideo;
  */
 var userList;
 
-var iconnnn;
 /*
  * Whether the current video was skipped or not.
  */
