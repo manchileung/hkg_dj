@@ -168,7 +168,7 @@ function displayUI()
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
     + '">用戶列表</p>');
 */
-  $('#plugbot-ui').append();
+  $('#plugbot-ui').append('1231231231');
 
 }
 
