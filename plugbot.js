@@ -131,6 +131,16 @@ function initAPIListeners()
  */
 function displayUI()
 {
+
+  $('#plugbot-icon').remove();
+
+
+  $('#plugbot-icon').append();
+
+}
+ 
+function displayUI()
+{
   /*
    * Be sure to remove any old instance of the UI, in case the user reloads the script without refreshing the page
    * (updating.)
