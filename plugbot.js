@@ -156,7 +156,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-woot" style="color:' + cWoot
     + '">自動正皮</p><p id="plugbot-btn-queue" style="color:' + cQueue
     + '">自動輪DJ</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋直到歌完</p>'
+    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋直到完</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
     + '">用戶列表</p>');
 }
@@ -209,13 +209,13 @@ function initUIListeners()
   });
 
   /*
-   * Toggle hide video.
+   * Toggle 摺埋首歌.
    */
   $('#plugbot-btn-hidevideo').on('click', function() {
     hideVideo = !hideVideo;
     $(this).css('color', hideVideo ? BUTTON_ON : BUTTON_OFF);
    
-    $(this).text(hideVideo ? 'hiding video' : 'hide video');
+    $(this).text(hideVideo ? 'hiding video' : '摺埋首歌');
     $('#yt-frame').animate({
       'height': (hideVideo ? '0px' : '271px')
     }, {
@@ -236,7 +236,7 @@ function initUIListeners()
   $('#plugbot-btn-skipvideo').on('click', function() {
     skippingVideo = !skippingVideo;
     $(this).css('color', skippingVideo ? BUTTON_ON : BUTTON_OFF);
-    $(this).text(skippingVideo ? 'skipping video' : 'skip video');
+    $(this).text(skippingVideo ? 'skipping video' : '摺埋直到完');
        
     if (hideVideo == skippingVideo) {
       $('#button-sound').click();
@@ -625,7 +625,7 @@ function readCookies()
  * Write the CSS rules that are used for components of the
  * Plug.bot UI.
  */
-$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 84px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }');
+$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }');
 
 
 /**
@@ -646,7 +646,7 @@ function onCookiesLoaded()
   queueUpdate();
 
   /*
-   * Hide video, if hideVideo is enabled.
+   * 摺埋首歌, if hideVideo is enabled.
    */
   if (hideVideo) {
     $('#yt-frame').animate({
