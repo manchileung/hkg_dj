@@ -51,6 +51,7 @@ var hideVideo;
  * Whether or not the user has enabled the userlist.
  */
 var userList;
+var iconnnn;
 /*
  * Whether the current video was skipped or not.
  */
@@ -133,12 +134,12 @@ function initAPIListeners()
 
 function displayiconUI()
 {
-if displayiconUI(){
+if iconnnn{ 
 $('#plugbot-icon').remove();
 $('#footer-container').prepend('<div id="plugbot-icon"></div>');
 $('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1100px"></frame>');
-}else {
-me.stop
+}else{
+ $('#plugbot-icon').remove();
 }
 
 }
@@ -178,7 +179,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p><p><span onclick="displayiconUI()">EMOJI ICON</span></p>');
+    + '">用戶列表</p><p><span onclick="$iconnnn">EMOJI ICON</span></p>');
 
 }
 
@@ -703,6 +704,7 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
+  displayiconUI()
   initUIListeners();
 }
 
