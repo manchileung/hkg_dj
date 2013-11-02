@@ -133,7 +133,7 @@ function displayiconUI()
 {
 
 $('#plugbot-icon').remove();
-$('body').append('<div id="plugbot-icon"></div>');
+$('footer-container').append('<div id="plugbot-icon"></div>');
 $('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1320px"></frame>');
 
 }
