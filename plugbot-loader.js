@@ -38,7 +38,7 @@
 /**
  * The root path to our JS files.
  */
-var path = 'https://github.com/manchileung/hkg_dj/master';
+var path = 'https://raw.github.com/manchileung/hkg_dj/master';
 
 /**
  * Print a message out to the chatbox on plug.dj, displayed locally.
@@ -60,11 +60,11 @@ function print(msg)
  */
 
 var scriptFail = window.setTimeout(function() {
-  print('plug.bot couldn\'t load.  Check out the "Basic Troubleshooting" section of the readme on github.com.  Chances are it\'s a simple fix.');
+  print('載入失敗，搵返高登POST問人吧。');
 }, 2000);
 
 $.getScript(path + '/plugbot.js', function() {
-  print('高登Plug.bot問候你');
+  print('HKG Plug DJ已載入');
   window.clearTimeout(scriptFail);
 });
  
