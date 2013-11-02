@@ -218,10 +218,11 @@ function initUIListeners()
   $('#plugbot-btn-woot').on('click', function() {
     autowoot = !autowoot;
     $(this).css('color', autowoot ? BUTTON_ON : BUTTON_OFF);
-
+/*
     if (autowoot) {
       $('#button-vote-positive').click();
     }
+*/
 
     jaaulde.utils.cookies.set(COOKIE_WOOT, autowoot);
   });
@@ -351,11 +352,13 @@ function isInQueue()
  */
 function joinQueue()
 {
+ /*
   if ($('#button-dj-play').css('display') === 'block') {
     $('#button-dj-play').click();
   } else if (API.getWaitList().length < MAX_USERS_WAITLIST) {
     API.djJoin();
   }
+  */
 }
 
 
@@ -656,10 +659,12 @@ function onCookiesLoaded()
   /*
    * Hit the woot button, if autowoot is enabled.
    */
+   
+   /*
   if (autowoot) {
     $('#button-vote-positive').click();
   }
-
+*/
   /*
    * Auto-queue, if autoqueue is enabled and the list is not full yet.
    */
