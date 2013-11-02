@@ -156,7 +156,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-woot" style="color:' + cWoot
     + '">自動正皮</p><p id="plugbot-btn-queue" style="color:' + cQueue
     + '">自動輪DJ</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋直到完</p>'
+    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
     + '">用戶列表</p>');
 }
@@ -215,7 +215,7 @@ function initUIListeners()
     hideVideo = !hideVideo;
     $(this).css('color', hideVideo ? BUTTON_ON : BUTTON_OFF);
    
-    $(this).text(hideVideo ? 'hiding video' : '摺埋首歌');
+    $(this).text(hideVideo ? '埋已摺' : '摺埋首歌');
     $('#yt-frame').animate({
       'height': (hideVideo ? '0px' : '271px')
     }, {
@@ -236,7 +236,7 @@ function initUIListeners()
   $('#plugbot-btn-skipvideo').on('click', function() {
     skippingVideo = !skippingVideo;
     $(this).css('color', skippingVideo ? BUTTON_ON : BUTTON_OFF);
-    $(this).text(skippingVideo ? 'skipping video' : '摺埋直到完');
+    $(this).text(skippingVideo ? '埋已摺,音已靜' : '摺埋+靜音');
        
     if (hideVideo == skippingVideo) {
       $('#button-sound').click();
