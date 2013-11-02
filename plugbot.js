@@ -134,7 +134,7 @@ function displayiconUI()
 
 $('#plugbot-icon').remove();
 $('#chat').prepend('<div id="plugbot-icon"></div>');
-$('#plugbot-icon').append('<<iframe src="http://www.emoji-cheat-sheet.com/"></iframe>');
+$('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="800px" srcdoc="<h2>People</h2>"></iframe>');
 
 }
  
