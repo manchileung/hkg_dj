@@ -134,7 +134,7 @@ function displayiconUI()
 
 $('#plugbot-icon').remove();
 $('#chat').prepend('<div id="plugbot-icon"></div>');
-$('#plugbot-icon').append('<img src="http://i.imgur.com/kQ5aSxM.jpg">');
+$('#plugbot-icon').append('<a href="http://www.emoji-cheat-sheet.com/" target="_blank">ICON</a>');
 
 }
  
