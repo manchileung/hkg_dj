@@ -90,11 +90,10 @@ function initAPIListeners()
 
 function displayiframe()
 {
-
   
-$('#chat').prepend('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
-$('body').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');  
-$('#footer-container').prepend('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
+$('#plugbot-iframe').remove();
+$('#footer-container').prepend('<div id="plugbot-iframe"></div>');
+$('#plugbot-iframe').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
 
 }
 
