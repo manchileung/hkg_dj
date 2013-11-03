@@ -195,8 +195,8 @@ function initUIListeners()
    
     $(this).text(hideVideo ? '埋已摺' : '摺埋條片');
     $('#yt-frame').animate({
-      'height': (hideVideo ? '720px' : '271px')
-    },{'width': (hideVideo ? '1280px' : '480px')}, {
+      'height': (hideVideo ? '0px' : '271px')
+    }, {
       duration: 'fast'
     });
     $('#playback .frame-background').animate({
@@ -634,8 +634,8 @@ function onCookiesLoaded()
    */
   if (hideVideo) {
     $('#yt-frame').animate({
-      'height': (hideVideo ? '720px' : '271px')
-    },{'width': (hideVideo ? '1280px' : '480px')},{
+      'height': (hideVideo ? '0px' : '271px')
+    },{
       duration: 'fast'
     });
     $('#playback .frame-background').animate({
