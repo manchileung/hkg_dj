@@ -99,7 +99,7 @@ function displayiframe()
   
 $('#plugbot-iframe').remove();
 $('#footer-container').prepend('<div id="plugbot-iframe"></div>');
-$('#plugbot-iframe').append('<span onclick="closeiframe()"><center><img src="http://forum1.hkgolden.com/faces/bouncer.gif"/>按此關閉Icon選擇框<img src="http://forum1.hkgolden.com/faces/bouncer.gif"/></center><br>/><iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1150px"></frame></span>');
+$('#plugbot-iframe').append('<span onclick="closeiframe()"><center><img src="http://forum1.hkgolden.com/faces/bouncer.gif"/>按此關閉Icon選擇框<img src="http://forum1.hkgolden.com/faces/bouncer.gif"/></center><br>/><iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1150px" name="iframe1"></frame></span>');
 
 }
 
@@ -134,7 +134,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋條片</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋條片靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表(人多會LAG)</p><p><span onclick="displayiframe()">Emoji Icon</span></p><p><a href="http://forum1.hkgolden.com/view.aspx?message=4795620" target="iframe"><span onclick="displayiframe()">高登Post</span></a></p></span>');
+    + '">用戶列表(人多會LAG)</p><p><span onclick="displayiframe()">Emoji Icon</span></p><p><a href="http://forum1.hkgolden.com/view.aspx?message=4795620" target="iframe1"><span onclick="displayiframe()">高登Post</span></a></p></span>');
 }
 
 
