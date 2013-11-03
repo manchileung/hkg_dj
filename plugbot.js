@@ -99,7 +99,7 @@ function displayiframe()
   
 $('#plugbot-iframe').remove();
 $('#footer-container').prepend('<div id="plugbot-iframe"></div>');
-$('#plugbot-iframe').append('<span onclick="closeiframe()">按此關閉Icon選擇框<br>/><iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1150px"></frame></span>');
+$('#plugbot-iframe').append('<span onclick="closeiframe()"><center><img src="http://forum1.hkgolden.com/faces/bouncer.gif"/>按此關閉Icon選擇框<img src="http://forum1.hkgolden.com/faces/bouncer.gif"/></center><br>/><iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1150px"></frame></span>');
 
 }
 
