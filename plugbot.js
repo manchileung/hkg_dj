@@ -131,13 +131,7 @@ function initAPIListeners()
  * Renders all of the Plug.bot "UI" that is visible beneath the video player.
  */
  
- function displayico777nUI()
-{
- if ($iconnnn = "0"){
-  $iconnnn = "1"
- }else{$iconnnn = "0"}
 
-}
  
  
  
@@ -718,7 +712,6 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
-  displayico777nUI()
   initUIListeners();
 }
 
