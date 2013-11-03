@@ -634,8 +634,8 @@ function onCookiesLoaded()
    */
   if (hideVideo) {
     $('#yt-frame').animate({
-      'height': (hideVideo ? '0px' : '271px')
-    }, {
+      'height': (hideVideo ? '720px' : '271px')
+    },{'width': (hideVideo ? '1280px' : '480px')},{
       duration: 'fast'
     });
     $('#playback .frame-background').animate({
