@@ -88,6 +88,11 @@ function initAPIListeners()
   });
 }
 
+function displayiframe()
+{
+  $('footer-container').append('<span style="margin-top=100px;"><iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame></span>');  
+}
+
 
 /**
  * Renders all of the Plug.bot "UI" that is visible beneath the video player.
@@ -119,7 +124,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋條片</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋條片靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p>');
+    + '">用戶列表(人多會LAG)</p>');
 }
 
 
@@ -642,6 +647,7 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
+  displayiframe();
   initUIListeners();
 }
 
