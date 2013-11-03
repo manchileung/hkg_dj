@@ -143,7 +143,7 @@ function initAPIListeners()
  
 function displayiconUI()
 {
-if (iconnnn="0"){
+if (iconnnn){
 $('#plugbot-icon').remove();
 $('#footer-container').prepend('<div id="plugbot-icon"></div>');
 $('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1100px"></frame>');
@@ -232,6 +232,16 @@ function initUIListeners()
   /*
    * Toggle auto-woot.
    */
+   
+     $('#plugbot-icon').on('click', function() {
+    iconnnn = !iconnnn;
+  });
+   
+   
+
+   
+   
+   
   $('#plugbot-btn-woot').on('click', function() {
     autowoot = !autowoot;
     $(this).css('color', autowoot ? BUTTON_ON : BUTTON_OFF);
@@ -320,14 +330,7 @@ function djAdvanced(obj)
     skippingVideo = false;
   }
 
-  /*
-   * If auto-woot is enabled, WOOT! the song.
 
-  if (autowoot) {
-    $('#button-vote-positive').click();
-  }   
-  
-  */
 
   /*
    * If the userlist is enabled, re-populate it.
@@ -715,7 +718,6 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
-  displayiconUI();
   displayico777nUI()
   initUIListeners();
 }
