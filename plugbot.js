@@ -92,11 +92,8 @@ function displayiframe()
 {
   $('#plugbot-iframe').append('<span style="margin-top=100px;"><iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame></span>');
   $('footer-container').append('<span style="margin-top=100px;"><iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame></span>');  
-  $('#chat').prepend('<img src="http://i.imgur.com/8no6UbX.png" />');
-  $('#plugbot-iframe').prepend('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
-  
-  
-  
+  $('#chat').prepend('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
+
 }
 
 
