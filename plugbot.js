@@ -312,7 +312,9 @@ function queueUpdate()
    */
   if (autoqueue && !isInQueue())
   {
+    /*
     joinQueue();
+    */
   }
 }
 
