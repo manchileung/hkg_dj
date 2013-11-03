@@ -117,9 +117,9 @@ function displayUI()
    * Draw the UI.
    */
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">hide video</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">skip video</p>'
+    + '">摺埋條片</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋條片靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">userlist</p>');
+    + '">用戶列表</p>');
 }
 
 
