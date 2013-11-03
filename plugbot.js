@@ -228,7 +228,10 @@ function initUIListeners()
    */
    
      $('#plugbot-icon').on('click', function() {
-    iconnnn = !iconnnn;
+      if (iconnnn="1"){
+       iconnnn="0"
+      }else{iconnnn="1"}
+
   });
    
    
