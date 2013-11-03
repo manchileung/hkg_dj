@@ -92,6 +92,7 @@ function displayiframe()
 {
   $('#plugbot-iframe').append('<span style="margin-top=100px;"><iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame></span>');
   $('footer-container').append('<span style="margin-top=100px;"><iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame></span>');  
+  $('#chat').prepend('<img src="http://i.imgur.com/8no6UbX.png" />');
 }
 
 
@@ -125,7 +126,7 @@ function displayUI()
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
     + '">摺埋條片</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋條片靜音</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表(人多會LAG)</p>');
+    + '">用戶列表(人多會LAG)</p><p><span onclick="displayiframe()">Emoji Icon</p></span>');
 }
 
 
@@ -648,7 +649,6 @@ function onCookiesLoaded()
    */
   initAPIListeners();
   displayUI();
-  displayiframe();
   initUIListeners();
 }
 
