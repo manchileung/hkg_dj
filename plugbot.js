@@ -93,7 +93,7 @@ function displayiframe()
   
 $('#plugbot-iframe').remove();
 $('#footer-container').prepend('<div id="plugbot-iframe"></div>');
-$('#plugbot-iframe').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="70%"></frame>');
+$('#plugbot-iframe').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1000px"></frame>');
 
 }
 
