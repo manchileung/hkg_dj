@@ -90,9 +90,7 @@ function initAPIListeners()
 
 function displayiframe()
 {
-$('#chat').remove();
-$('body').remove();
-$('#footer-container').remove();
+
   
 $('#chat').prepend('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');
 $('body').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0"></frame>');  
