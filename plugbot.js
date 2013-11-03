@@ -195,7 +195,7 @@ function initUIListeners()
    
     $(this).text(hideVideo ? '埋已摺' : '摺埋條片');
     $('#yt-frame').animate({
-      'height': (hideVideo ? '0px' : '271px')
+      'height': (hideVideo ? '720px' : '271px');'width': (hideVideo ? '1280px' : '480px');
     }, {
       duration: 'fast'
     });
