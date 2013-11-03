@@ -1,41 +1,4 @@
 /*
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-/*
- * TERMS OF REPRODUCTION USE
- *
- * 1. Provide a link back to the original repository (this repository), as
- *    in, https://github.com/ConnerGDavis/Plugbot, that is well-visible
- *    wherever the source is being reproduced.  For example, should you
- *    display it on a website, you should provide a link above/below that
- *    which the users use, titled something such as "ORIGINAL AUTHOR".
- *
- * 2. Retain the GNU GPL, TERMS OF REPRODUCTION USE and author header comments at
- *    the beginning of any redistributed files you produce.
- *
- * Failure to follow these terms will result in me getting very angry at you
- * and having your software tweaked or removed if possible.  Either way, you're
- * still an idiot for not following such a basic rule, so at least I'll have
- * that going for me.
- */
-
-/*
- * @author  Conner Davis (Fugitive. on Plug.dj)
- */
- 
-/*
  * Whether the user has currently enabled auto-woot.
  */
 var autowoot;
@@ -43,7 +6,6 @@ var autowoot;
  * Whether the user has currently enabled auto-queueing.
  */
 var autoqueue;
-var iconnnn = "0";
 /*
  * Whether or not the user has enabled hiding this video.
  */
@@ -130,22 +92,6 @@ function initAPIListeners()
 /**
  * Renders all of the Plug.bot "UI" that is visible beneath the video player.
  */
- 
-
- 
- 
- 
-function displayiconUI()
-{
-if (iconnnn="1"){
-$('#plugbot-icon').remove();
-$('#footer-container').prepend('<div id="plugbot-icon"></div>');
-$('#plugbot-icon').append('<iframe src="http://www.emoji-cheat-sheet.com/" border="0" height="700px" width="1100px"></frame>');
-}else{
- $('#plugbot-icon').remove();
-}
-}
- 
 function displayUI()
 {
   /*
@@ -170,22 +116,11 @@ function displayUI()
   /*
    * Draw the UI.
    */
-/*
-  $('#plugbot-ui').append('<p id="plugbot-btn-woot" style="color:' + cWoot
-    + '">自動正皮</p><p id="plugbot-btn-queue" style="color:' + cQueue
-    + '">自動輪DJ</p><p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
-    + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p>');
-*/
   $('#plugbot-ui').append('<p id="plugbot-btn-hidevideo" style="color:' + cHideVideo
-    + '">摺埋首歌</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">摺埋+靜音</p>'
+    + '">hide video</p><p id="plugbot-btn-skipvideo" style="color:' + BUTTON_OFF + '">skip video</p>'
     + '<p id="plugbot-btn-userlist" style="color:' + cUserList 
-    + '">用戶列表</p><p><span onclick="displayiconUI()">EMOJI ICON</span></p>');
-
+    + '">userlist</p>');
 }
-
-
 
 
 /**
@@ -199,9 +134,6 @@ function displayUI()
  *   3. *Execute whatever logic pertains to the specific button*
  *   4. Update the cookie.
  */
- 
- 
- 
 function initUIListeners()
 {
   /*
@@ -226,39 +158,27 @@ function initUIListeners()
   /*
    * Toggle auto-woot.
    */
-   
-     $('#plugbot-icon').on('click', function() {
-      if (iconnnn="1"){
-       iconnnn="0";
-      }else{iconnnn="1"}
-
-  });
-   
-   
-
-   
-   
-   
   $('#plugbot-btn-woot').on('click', function() {
     autowoot = !autowoot;
     $(this).css('color', autowoot ? BUTTON_ON : BUTTON_OFF);
-/*
+
     if (autowoot) {
-      $('#button-vote-positive').click();
+     /* 
+     $('#button-vote-positive').click();
+     */
     }
-*/
 
     jaaulde.utils.cookies.set(COOKIE_WOOT, autowoot);
   });
 
   /*
-   * Toggle 摺埋首歌.
+   * Toggle hide video.
    */
   $('#plugbot-btn-hidevideo').on('click', function() {
     hideVideo = !hideVideo;
     $(this).css('color', hideVideo ? BUTTON_ON : BUTTON_OFF);
    
-    $(this).text(hideVideo ? '埋已摺' : '摺埋首歌');
+    $(this).text(hideVideo ? '埋已摺' : '摺埋條片');
     $('#yt-frame').animate({
       'height': (hideVideo ? '0px' : '271px')
     }, {
@@ -279,7 +199,7 @@ function initUIListeners()
   $('#plugbot-btn-skipvideo').on('click', function() {
     skippingVideo = !skippingVideo;
     $(this).css('color', skippingVideo ? BUTTON_ON : BUTTON_OFF);
-    $(this).text(skippingVideo ? '埋已摺,音已靜' : '摺埋+靜音');
+    $(this).text(skippingVideo ? '埋已摺,音已靜' : '摺埋條片靜音');
        
     if (hideVideo == skippingVideo) {
       $('#button-sound').click();
@@ -322,12 +242,19 @@ function djAdvanced(obj)
    * If they want to skip the next video, do it.
    */
   if (skippingVideo) {
-    $('#plugbot-btn-skipvideo').css('color', BUTTON_ON).text('skip video');
+    $('#plugbot-btn-skipvideo').css('color', BUTTON_ON).text('摺埋條片靜音');
     $('#button-sound').click();
     skippingVideo = false;
   }
 
-
+  /*
+   * If auto-woot is enabled, WOOT! the song.
+   */
+  if (autowoot) {
+    /*
+    $('#button-vote-positive').click();
+    */
+  }
 
   /*
    * If the userlist is enabled, re-populate it.
@@ -345,11 +272,11 @@ function queueUpdate()
 {
   /*
    * If auto-queueing has been enabled, and we are currently not in the waitlist, then try to join the list.
-
+   */
   if (autoqueue && !isInQueue())
   {
     joinQueue();
-  }   */
+  }
 }
 
 
@@ -369,13 +296,13 @@ function isInQueue()
  */
 function joinQueue()
 {
- /*
   if ($('#button-dj-play').css('display') === 'block') {
-    $('#button-dj-play').click();
+  /*
+  $('#button-dj-play').click();
+  */
   } else if (API.getWaitList().length < MAX_USERS_WAITLIST) {
     API.djJoin();
   }
-  */
 }
 
 
@@ -665,7 +592,7 @@ function readCookies()
  * Write the CSS rules that are used for components of the
  * Plug.bot UI.
  */
-$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }#plugbot-icon { position: absolute; margin-left: 5px; margin-top:80px; }#plugbot-icon p { background-color: #0b0b0b; height: 352px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 100px; font-size: 15px; margin: 0; }');
+$('body').prepend('<style type="text/css" id="plugbot-css">#plugbot-ui { position: absolute; margin-left: 349px; }#plugbot-ui p { background-color: #0b0b0b; height: 32px; padding-top: 8px; padding-left: 8px; padding-right: 6px; cursor: pointer; font-variant: small-caps; width: 84px; font-size: 15px; margin: 0; }#plugbot-ui h2 { background-color: #0b0b0b; height: 112px; width: 156px; margin: 0; color: #fff; font-size: 13px; font-variant: small-caps; padding: 8px 0 0 12px; border-top: 1px dotted #292929; }#plugbot-userlist { border: 6px solid rgba(10, 10, 10, 0.8); border-left: 0 !important; background-color: #000000; padding: 8px 0px 20px 0px; width: 12%; }#plugbot-userlist p { margin: 0; padding-top: 4px; text-indent: 24px; font-size: 10px; }#plugbot-userlist p:first-child { padding-top: 0px !important; }#plugbot-queuespot { color: #42A5DC; text-align: left; font-size: 15px; margin-left: 8px }');
 
 
 /**
@@ -676,19 +603,19 @@ function onCookiesLoaded()
   /*
    * Hit the woot button, if autowoot is enabled.
    */
-   
-   /*
   if (autowoot) {
-    $('#button-vote-positive').click();
+   /*
+   $('#button-vote-positive').click();
+   */
   }
-*/
+
   /*
    * Auto-queue, if autoqueue is enabled and the list is not full yet.
    */
   queueUpdate();
 
   /*
-   * 摺埋首歌, if hideVideo is enabled.
+   * Hide video, if hideVideo is enabled.
    */
   if (hideVideo) {
     $('#yt-frame').animate({
