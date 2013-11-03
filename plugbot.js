@@ -229,7 +229,7 @@ function initUIListeners()
    
      $('#plugbot-icon').on('click', function() {
       if (iconnnn="1"){
-       iconnnn="0"
+       iconnnn="0";
       }else{iconnnn="1"}
 
   });
