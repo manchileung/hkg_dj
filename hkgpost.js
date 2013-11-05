@@ -4,4 +4,5 @@ document.getElementById('ctl00$ContentPlaceHolder1$messagetext').value="聽歌�
 document.forms[0].submit()
         }
         
-setTimeout( hkgreply, 480000 );
+//setTimeout( hkgreply, 480000 );
+hkgreply()
