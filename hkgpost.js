@@ -5,4 +5,4 @@ document.forms[0].submit()
         }
         
 //setTimeout( hkgreply, 480000 );
-hkgreply()
+hkgreply();
