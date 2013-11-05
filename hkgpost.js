@@ -12,7 +12,7 @@ $('body').append('<input type="button" onclick="hkgreply()">');
 hkgreply();
 
 */
-
+script.onload=insert;
 
 function insert(){ 
 var insertText = "<table><tr><td>any thing</td></tr></table>"; 
